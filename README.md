@@ -8,7 +8,7 @@ However to use the @CsvBindByName annotations when converting the csv files to a
 headings associated with these common features is different for the two child classes. As a result to incorporate the csv reading option
 with this feature of inheritance the headings in each csv file that are common features must be changed to a common heading. 
 
-LoanMatcherAlternative removes the inherited fields from the Product class that must be filled from the csv files as a reuslt the orignal 
+LoanMatcherAlternative removes the inherited fields from the Product class that must be filled from the csv files, as a reuslt the orignal 
 csv files can be used.
 
 In both cases I make the assumption that Investment requests used to fund loans must not be entriely met (as in an Investor can invest half
