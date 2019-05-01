@@ -31,6 +31,7 @@ public class DataProcessor {
 	 * @throws FileNotFoundException when the file is not found
 	 */
 	public List<Loan> processLoans(String filepath) throws IllegalStateException, FileNotFoundException {
+		
 		FileReader fileReader = new FileReader(filepath);
 		List<Loan> loans = new CsvToBeanBuilder<Loan>(fileReader).withType(Loan.class).build().parse();
 		return loans;
@@ -122,6 +123,7 @@ public class DataProcessor {
             e.printStackTrace();
         }
 	}
+	
 	
 	
 }

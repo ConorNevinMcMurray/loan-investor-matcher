@@ -1,6 +1,7 @@
 import java.util.*;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 /**
  * A class representing a Loan and the attributes that a loan might have
@@ -184,5 +185,6 @@ public class Loan extends Product{
 		loanInfo +="% funded: " + allocated()/getAmount() + "\n";
 		return loanInfo;
 	}
+	
 
 }

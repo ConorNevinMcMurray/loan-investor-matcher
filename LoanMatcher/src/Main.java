@@ -36,11 +36,13 @@ public class Main {
 
 		LoanMatcher loanMatcher = new LoanMatcher(loans, investRequests);
 		dataProcessor.writeLoansToJSON(loanMatcher.getMatchedLoans());
-		System.out.println(loanMatcher.balanced());
-		
-		for(Loan loan : loanMatcher.getMatchedLoans()) {
-			System.out.println(loan);
+		if(loanMatcher.balanced()) {
+			for(Loan loan : loanMatcher.getMatchedLoans()) {
+				System.out.println(loan);
+			}
 		}
+		
+		
 		
 
 	}

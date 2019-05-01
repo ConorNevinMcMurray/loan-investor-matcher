@@ -1,6 +1,7 @@
 import java.util.*;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 /**
  * A class representing an Investment and the attributes an investment might have

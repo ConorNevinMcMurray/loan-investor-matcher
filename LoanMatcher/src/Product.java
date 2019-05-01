@@ -1,24 +1,38 @@
 import java.util.HashMap;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 /**
  * A class that is abstract and represents the common nature of a Loan and Investment 
  * this being the associations a loan might have with an investment and the common fields
  * being type term and the amount this allows to reduce code duplication however it has restricted 
  * the ease in which the original csv files can be used without changing titles of columns and as
- * a result the csv files require the columns to be changed 
+ * a result the csv files require the column headings to be altered to be common for those they inherit
  * @author conor
  *
  */
 public abstract class Product {
-	
-	@CsvBindByName(column = "type", required = true)
-	private String type;
-	@CsvBindByName(column = "term", required = true)
-	private int term;
+
+	/**
+	 * the amount for the product
+	 */
 	@CsvBindByName(column = "amount", required = true)
 	private double amount;
+	/**
+	 * the type of the product
+	 */
+	@CsvBindByName(column = "type", required = true)
+	private String type;
+	/**
+	 * the term of the product
+	 */
+	@CsvBindByName(column = "term", required = true)
+	private int term;
+
+	/**
+	 * the allocations to the product of other products
+	 */
 	private HashMap<Product, Double> allocations;
 	
 	/**
@@ -35,10 +49,10 @@ public abstract class Product {
 	 * @param term
 	 */
 	public Product(double amount, String type, int term) {
-		this.amount = amount;		
-		this.type = type;
-		this.term = term;
-		this.allocations = new HashMap<>();
+		setAmount(amount);		
+		setType(type);
+		setTerm(term);
+		allocations = new HashMap<>();
 	}
 	
 	/**
