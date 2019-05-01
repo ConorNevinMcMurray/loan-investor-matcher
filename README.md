@@ -1,5 +1,6 @@
 # loan-investor-matcher
-Small program to match loans to Investment requests
+Small program to match loans to Investment requests.
+
 LoanMatcher uses an abstract class Product to provide inheritance to the Loan and Investment classes to capture the common features of 
 amount, type and term.
 
