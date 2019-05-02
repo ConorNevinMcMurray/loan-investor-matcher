@@ -2,7 +2,8 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * Main class to run the main method 
+ * Main class to run the main method to match loans to funds from investment requests
+ * the main method prints out the results as well as creates a JSON representation of the mathced loan data
  * @author conor
  *
  */
