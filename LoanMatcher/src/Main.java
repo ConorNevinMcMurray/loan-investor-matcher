@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * 
+ * Main class to run the main method 
  * @author conor
  *
  */
@@ -36,15 +36,15 @@ public class Main {
 
 		LoanMatcher loanMatcher = new LoanMatcher(loans, investRequests);
 		dataProcessor.writeLoansToJSON(loanMatcher.getMatchedLoans());
+		// make sure all the loans are balanced (investments are not over allocated)
 		if(loanMatcher.balanced()) {
+			// print all the loans out
 			for(Loan loan : loanMatcher.getMatchedLoans()) {
 				System.out.println(loan);
 			}
 		}
 		
 		
-		
-
 	}
 	
 	

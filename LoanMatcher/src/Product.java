@@ -167,5 +167,8 @@ public abstract class Product {
 	public void setAllocations(HashMap<Product, Double> allocations) {
 		this.allocations = allocations;
 	}
+	
+	
+
 
 }

@@ -51,8 +51,5 @@ public class Investment extends Product {
 	public void setInvestor(String investor) {
 		this.investor = investor;
 	}
-	
-
-
 
 }
