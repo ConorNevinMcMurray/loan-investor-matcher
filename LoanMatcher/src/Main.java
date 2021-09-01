@@ -25,6 +25,7 @@ public class Main {
 		String method = "csv";
 		if(method.equals("hardcoded")){
 			// use the hard coded data in the dataProcessor
+			
 			loans = dataProcessor.provideLoans();
 			investRequests = dataProcessor.provideInvestmentRequests();
 		}else {
